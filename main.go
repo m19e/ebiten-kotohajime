@@ -7,6 +7,8 @@ import (
 	"github.com/hajimehoshi/ebiten/v2"
 )
 
+var image *ebiten.Image
+
 type Game struct{}
 
 func (g *Game) Update() error {
