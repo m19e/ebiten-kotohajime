@@ -5,9 +5,18 @@ import (
 	"log"
 
 	"github.com/hajimehoshi/ebiten/v2"
+	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
 )
 
-var image *ebiten.Image
+var img *ebiten.Image
+
+func init() {
+	var err error
+	img, _, err = ebitenutil.NewImageFromFile("assets/gopher.png")
+	if err != nil {
+		log.Fatal(err)
+	}
+}
 
 type Game struct{}
 
