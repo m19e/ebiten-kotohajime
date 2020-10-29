@@ -1,6 +1,7 @@
 package main
 
 import (
+	_ "image/png"
 	"log"
 
 	"github.com/hajimehoshi/ebiten/v2"
@@ -11,7 +12,7 @@ var img *ebiten.Image
 
 func init() {
 	var err error
-	img, _, err = ebitenutil.NewImageFromFile("assets/gopher.png")
+	img, _, err = ebitenutil.NewImageFromFile("gopher.png")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -30,7 +31,7 @@ func (g *Game) Draw(screen *ebiten.Image) {
 }
 
 func (g *Game) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeight int) {
-	return 320, 240
+	return 640, 480
 }
 
 func main() {
