@@ -28,7 +28,7 @@ func (g *Game) Draw(screen *ebiten.Image) {
 	op := &ebiten.DrawImageOptions{}
 	op.GeoM.Translate(50, 50)
 	op.GeoM.Scale(1.5, 1)
-	screen.DrawImage(img, nil)
+	screen.DrawImage(img, op)
 }
 
 func (g *Game) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeight int) {
